@@ -106,6 +106,7 @@
     </Compile>
     <Compile Include="CounterControl.cs" />
     <Compile Include="EmotionsButton.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="ImagesUri.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

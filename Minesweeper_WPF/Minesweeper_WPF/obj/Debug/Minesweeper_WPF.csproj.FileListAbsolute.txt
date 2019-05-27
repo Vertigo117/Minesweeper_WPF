@@ -31,3 +31,4 @@ C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\Debug\Minesweeper_WPF.
 C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.Properties.Resources.resources
 C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.csproj.CoreCompileInputs.cache
 C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.exe
+C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.csprojAssemblyReference.cache

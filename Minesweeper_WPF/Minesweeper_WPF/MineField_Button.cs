@@ -88,12 +88,22 @@ namespace Minesweeper_WPF
 
         private static readonly BitmapSource ButtonTypesImageSource;
 
+        public EventHandler Explode;
+
+        public EventHandler Dismantle;
+
         public static readonly DependencyProperty CurrentCellTypeProperty =
             DependencyProperty.Register(
                 nameof(CurrentCellType),
                 typeof(CellType),
                 typeof(MineField_Button),
                 new PropertyMetadata(CellType.Button, CellTypeChanged));
+
+        public bool Mined { get; set; }
+        public bool Dismantled { get; set; }
+        public bool Opened { get; set; }
+        public int X { get; }
+        public int Y { get; }
 
         public void SetType(CellType cellType)
         {
@@ -104,6 +114,8 @@ namespace Minesweeper_WPF
 
             CurrentCellType = cellType;
         }
+
+       
 
         public CellType CurrentCellType
         {
@@ -118,9 +130,11 @@ namespace Minesweeper_WPF
             }
         }
 
-        public MineField_Button()
+        public MineField_Button(int x, int y)
         {
             DataContext = this;
+            X = x;
+            Y = y;
         }
 
         static MineField_Button()
@@ -162,5 +176,7 @@ namespace Minesweeper_WPF
             base.OnInitialized(e);
             UpdateButtonImage();
         }
+
+
     }
 }

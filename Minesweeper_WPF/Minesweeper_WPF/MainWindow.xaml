@@ -40,7 +40,7 @@
                                 <ColumnDefinition Width="25"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <local:EmotionsButton EmotionTypeValue="Common" ParentWindow="{Binding ElementName=Minefield}" x:Name="emotionsBtn" Grid.Row="1" Grid.Column="1"/>
+                            <local:EmotionsButton EmotionTypeValue="Common" x:Name="emotionsBtn" Grid.Row="1" Grid.Column="1"/>
                             <local:CounterControl x:Name="timer" Grid.Row="1" Grid.Column="2" Height="25" HorizontalAlignment="Center"/>
                             <local:CounterControl x:Name="mines" Grid.Row="1" Grid.Column="0" Height="25" HorizontalAlignment="Center"/>
                            
@@ -52,7 +52,7 @@
                 </Border>
                 <Border  Margin="6 2 6 6" BorderBrush="DarkGray" BorderThickness="6 6 0 0" ClipToBounds="True">
                     <Border ClipToBounds="True" BorderBrush="White" BorderThickness="0 0 6 6">
-                        <local:MineField/>
+                        <local:MineField x:Name="mineField"/>
                     </Border>
                 </Border>
             </DockPanel>
