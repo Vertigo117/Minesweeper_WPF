@@ -141,13 +141,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ButtonTypes.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Emotions.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Numbers.bmp" />
+    <Resource Include="Images\ButtonTypes.bmp" />
+    <Resource Include="Images\Emotions.bmp" />
+    <Resource Include="Images\Numbers.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
