@@ -29,13 +29,6 @@ namespace Minesweeper_WPF
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Game game = new Game(10, 10, GameFieldGrid);
-            game.Start();
-           
-            
-
-        }
+        
     }
 }

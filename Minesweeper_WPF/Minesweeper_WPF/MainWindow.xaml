@@ -7,25 +7,56 @@
         mc:Ignorable="d"
         Title="MineSweeper" Height="360" Width="290" ResizeMode="CanMinimize">
     <Window.Resources>
-        <Style x:Key="TextBoxStyle" TargetType="TextBox">
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="TextAlignment" Value="Center"/>
-            <Setter Property="Background" Value="Black"/>
-            <Setter Property="Foreground" Value="Red"/>
-            <Setter Property="FontSize" Value="18"/>
-        </Style>
+        
     </Window.Resources>
-    <StackPanel Name="GameStackPanel">
-        <Grid Height="50"  VerticalAlignment="Top" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Name="LabelMines" Style="{StaticResource TextBoxStyle}" Grid.Column="0">0</TextBox>
-            <TextBox Name="LabelTime" Style="{StaticResource TextBoxStyle}" Grid.Column="2">0</TextBox>
-            <Button Margin="10" Grid.Column="1" Click="Button_Click"></Button>
-        </Grid>
-        <Grid Name="GameFieldGrid" Margin="10"/>
-    </StackPanel>
+    <DockPanel Name="GameDockPanel">
+
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Game">
+                <MenuItem Header="New" Command="{Binding NewGameCommand}"/>
+                <Separator />
+                <MenuItem Header="Beginner" Command="{Binding BeginnerCommand}" />
+                <MenuItem Header="Intermediate" Command="{Binding IntermediateCommand}" />
+                <MenuItem Header="Expert" Command="{Binding ExpertCommand}" />
+                <Separator />
+                <MenuItem Header="Exit" Command="{Binding ExitCommand}" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About" Command="{Binding AboutCommand}"/>
+            </MenuItem>
+        </Menu>
+        <Border BorderThickness="3 3 0 0" BorderBrush="White">
+            <DockPanel Background="LightGray">
+                <Border DockPanel.Dock="Top" Margin="6" BorderBrush="DarkGray" BorderThickness="2, 2, 0, 0">
+                    <Border BorderBrush="White" BorderThickness="0 0 2 2" >
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <!--<RowDefinition Height="*"/>-->
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <local:EmotionsButton EmotionTypeValue="Common" ParentWindow="{Binding ElementName=Minefield}" x:Name="emotionsBtn" Grid.Row="1" Grid.Column="1"/>
+                            <local:CounterControl x:Name="timer" Grid.Row="1" Grid.Column="2" Height="25" HorizontalAlignment="Center"/>
+                            <local:CounterControl x:Name="mines" Grid.Row="1" Grid.Column="0" Height="25" HorizontalAlignment="Center"/>
+                           
+                            <Border BorderThickness="0 0 1 1" BorderBrush="White">
+                                
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Border>
+                <Border  Margin="6 2 6 6" BorderBrush="DarkGray" BorderThickness="6 6 0 0" ClipToBounds="True">
+                    <Border ClipToBounds="True" BorderBrush="White" BorderThickness="0 0 6 6">
+                        <local:MineField/>
+                    </Border>
+                </Border>
+            </DockPanel>
+
+        </Border>
+    </DockPanel>
 </Window>

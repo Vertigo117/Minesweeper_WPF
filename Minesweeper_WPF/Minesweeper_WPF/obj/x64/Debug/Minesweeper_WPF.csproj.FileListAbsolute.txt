@@ -1,0 +1,16 @@
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\x64\Debug\Minesweeper_WPF.exe.config
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\x64\Debug\Minesweeper_WPF.exe
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\x64\Debug\Minesweeper_WPF.pdb
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.csprojAssemblyReference.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\MainWindow.g.cs
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\App.g.cs
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF_MarkupCompile.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF_MarkupCompile.lref
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\MainWindow.baml
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.g.resources
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.Properties.Resources.resources
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.csproj.GenerateResource.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.csproj.CoreCompileInputs.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.exe
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\x64\Debug\Minesweeper_WPF.pdb

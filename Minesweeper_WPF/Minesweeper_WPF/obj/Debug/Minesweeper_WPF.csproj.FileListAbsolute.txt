@@ -12,4 +12,7 @@
 \\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.csproj.CoreCompileInputs.cache
 \\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.exe
 \\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.pdb
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\Debug\Minesweeper_WPF.exe.CodeAnalysisLog.xml
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\Debug\Minesweeper_WPF.exe.lastcodeanalysissucceeded
 \\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.csprojAssemblyReference.cache

@@ -63,9 +63,9 @@ namespace Minesweeper_WPF.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Flag {
+        internal static System.Drawing.Bitmap ButtonTypes {
             get {
-                object obj = ResourceManager.GetObject("Flag", resourceCulture);
+                object obj = ResourceManager.GetObject("ButtonTypes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Minesweeper_WPF.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mine {
+        internal static System.Drawing.Bitmap Emotions {
             get {
-                object obj = ResourceManager.GetObject("Mine", resourceCulture);
+                object obj = ResourceManager.GetObject("Emotions", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,59 +83,9 @@ namespace Minesweeper_WPF.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MineCrossed {
+        internal static System.Drawing.Bitmap Numbers {
             get {
-                object obj = ResourceManager.GetObject("MineCrossed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MineExploded {
-            get {
-                object obj = ResourceManager.GetObject("MineExploded", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Smiley_cool {
-            get {
-                object obj = ResourceManager.GetObject("Smiley_cool", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Smiley_dead {
-            get {
-                object obj = ResourceManager.GetObject("Smiley_dead", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Smiley_original {
-            get {
-                object obj = ResourceManager.GetObject("Smiley_original", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Smiley_scared {
-            get {
-                object obj = ResourceManager.GetObject("Smiley_scared", resourceCulture);
+                object obj = ResourceManager.GetObject("Numbers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
