@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -18,13 +18,11 @@ namespace Minesweeper_WPF
         private int incorrectDismantledMines;
         public event EventHandler DismantledMinesChanged;
         public event EventHandler Defeat;
-        Timer timer;
-
-
-        
-
+        public event EventHandler Victory;
+        public event EventHandler ChangeEmotion;
+        public event EventHandler RestoreEmotion;
+        DispatcherTimer timer;
         MineField_Button button;
-
         MineField_Button[,] buttonArray;
 
         public int Time { get; set; }
@@ -45,6 +43,7 @@ namespace Minesweeper_WPF
 
         public void Start(int columns, int rows, int mines)
         {
+            mineField.IsEnabled = true;
             mineField.Columns = columns;
             mineField.Rows = rows;
             mineField.Mines = mines;
@@ -55,7 +54,7 @@ namespace Minesweeper_WPF
             mineField.RowDefinitions.Clear();
 
             //mineField.Engage();
-            minesCounter.Number = mineField.Mines;
+            //minesCounter.Number = mineField.Mines;
 
             buttonArray = new MineField_Button[mineField.Columns, mineField.Rows];
 
@@ -77,6 +76,7 @@ namespace Minesweeper_WPF
                     button.Dismantle += new EventHandler(Dismantle);
                     button.MouseLeftButtonDown += new MouseButtonEventHandler(Click);
                     button.MouseRightButtonDown += new MouseButtonEventHandler(Dismantle_click);
+                    button.MouseLeftButtonUp += new MouseButtonEventHandler(Declick);
 
                     Grid.SetColumn(button, c);
                     Grid.SetRow(button, r);
@@ -88,9 +88,16 @@ namespace Minesweeper_WPF
             PlaceMines();
             DismantledMinesChanged?.Invoke(this, new EventArgs());
 
-            //timer = new Timer();
-            //timer.Interval = 1000;
-            //timer.
+            timer = new DispatcherTimer();
+            timeCounter.Number = 0;
+            timer.Tick += (sender, e) => { timeCounter.Number++; };
+            timer.Interval = new TimeSpan(0,0,1);
+            
+        }
+
+        private void Declick(object sender, MouseButtonEventArgs e)
+        {
+            RestoreEmotion?.Invoke(this, new EventArgs());
         }
 
         private void Dismantle_click(object sender, MouseButtonEventArgs e)
@@ -116,38 +123,36 @@ namespace Minesweeper_WPF
         {
 
             Defeat?.Invoke(this, new EventArgs());
+            timer.Stop();
 
             foreach(MineField_Button b in buttonArray)
             {
                 b.MouseLeftButtonDown -= new MouseButtonEventHandler(Click);
                 b.MouseRightButtonDown -= new MouseButtonEventHandler(Dismantle_click);
+                b.MouseLeftButtonUp -= new MouseButtonEventHandler(Declick);
 
-                if(button.Mined && button.CurrentCellType!=CellType.BombExplode)
+                if(b.Mined && b.CurrentCellType != CellType.BombExplode)
                 {
-                   if(!button.Dismantled)
+                   if(!b.Dismantled)
                     {
-                        button.SetType(CellType.Bomb);
+                        b.SetType(CellType.Bomb);
                     }
                    else
                     {
-                        button.SetType(CellType.Flagged);
+                        b.SetType(CellType.Flagged);
                     }
                 }
                 else
                 {
-                    if(button.Dismantled)
+                    if(b.Dismantled)
                     {
-                        button.SetType(CellType.NoBomb);
+                        b.SetType(CellType.NoBomb);
                     }
                 }
             }
         }
 
-        //private void RemoveEvents()
-        //{
-        //    button.MouseLeftButtonDown -= new MouseButtonEventHandler(Click);
-        //    button.MouseRightButtonDown -= new MouseButtonEventHandler(Dismantle_click);
-        //}
+       
 
         private void Dismantle(object sender, EventArgs e)
         {
@@ -160,7 +165,7 @@ namespace Minesweeper_WPF
                 }
                 else
                 {
-                    incorrectDismantledMines--;
+                    incorrectDismantledMines++;
                 }
             }
             else
@@ -175,12 +180,16 @@ namespace Minesweeper_WPF
                 }
             }
 
-            
+            DismantledMinesChanged?.Invoke(this, new EventArgs());
 
             if(dismantledMines==mineField.Mines)
             {
                 mineField.IsEnabled = false;
+                Victory?.Invoke(this, new EventArgs());
+                timer.Stop();
             }
+
+
         }
 
         
@@ -190,6 +199,8 @@ namespace Minesweeper_WPF
         private void Click(object sender, MouseButtonEventArgs e)
         {
             button = (MineField_Button)sender;
+            timer.Start();
+            ChangeEmotion?.Invoke(this, new EventArgs());
 
             if (!button.Dismantled)
             {

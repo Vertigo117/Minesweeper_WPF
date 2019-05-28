@@ -32,3 +32,6 @@ C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.
 C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.csproj.CoreCompileInputs.cache
 C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.exe
 C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF.csprojAssemblyReference.cache
+C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\Debug\Sounds\darkSouls.wav
+C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\bin\Debug\Sounds\skyrim.wav
+C:\C#\Minesweeper_WPF\Minesweeper_WPF\Minesweeper_WPF\obj\Debug\Minesweeper_WPF_Content.g.cs

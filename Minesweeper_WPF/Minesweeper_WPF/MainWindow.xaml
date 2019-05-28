@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Minesweeper_WPF"
         mc:Ignorable="d"
-        Title="MineSweeper" Height="360" Width="250" ResizeMode="CanMinimize">
+        Title="MineSweeper" Height="350" Width="240" ResizeMode="CanMinimize">
     <Window.Resources>
         
     </Window.Resources>
     <DockPanel Name="GameDockPanel">
 
-        <Menu DockPanel.Dock="Top">
+        <Menu x:Name="GameMenu" DockPanel.Dock="Top">
             <MenuItem Header="Game">
-                <MenuItem Header="New" Command="{Binding NewGameCommand}"/>
+                <MenuItem Header="New" Click="MenuItem_Click"/>
                 <Separator />
-                <MenuItem Header="Beginner" Command="{Binding BeginnerCommand}" />
-                <MenuItem Header="Intermediate" Command="{Binding IntermediateCommand}" />
-                <MenuItem Header="Expert" Command="{Binding ExpertCommand}" />
+                <MenuItem Header="Beginner" Click="MenuItem_Click"  />
+                <MenuItem Header="Intermediate"  Click="MenuItem_Click"/>
+                <MenuItem Header="Expert"  Click="MenuItem_Click"/>
                 <Separator />
-                <MenuItem Header="Exit" Command="{Binding ExitCommand}" />
+                <MenuItem Header="Exit" Click="MenuItem_Click" />
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About" Command="{Binding AboutCommand}"/>
@@ -42,7 +42,7 @@
                             </Grid.ColumnDefinitions>
                             <local:EmotionsButton EmotionTypeValue="Common" x:Name="emotionsBtn" Grid.Row="1" Grid.Column="1"/>
                             <local:CounterControl x:Name="timer" Grid.Row="1" Grid.Column="2" Height="25" HorizontalAlignment="Center"/>
-                            <local:CounterControl x:Name="mines" Grid.Row="1" Grid.Column="0" Height="25" HorizontalAlignment="Center"/>
+                            <local:CounterControl x:Name="minesCounter" Grid.Row="1" Grid.Column="0" Height="25" HorizontalAlignment="Center"/>
                            
                             
                                 
@@ -50,8 +50,8 @@
                         </Grid>
                     </Border>
                 </Border>
-                <Border  Margin="6 2 6 6" BorderBrush="DarkGray" BorderThickness="6 6 0 0" ClipToBounds="True">
-                    <Border ClipToBounds="True" BorderBrush="White" BorderThickness="0 0 6 6">
+                <Border  Margin="6 2 6 6" BorderBrush="DarkGray" BorderThickness="4 4 0 0" ClipToBounds="True">
+                    <Border ClipToBounds="True" BorderBrush="White" BorderThickness="0 0 4 4">
                         <local:MineField x:Name="mineField"/>
                     </Border>
                 </Border>
