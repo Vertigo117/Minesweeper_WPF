@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -37,11 +33,13 @@ namespace Minesweeper_WPF
             this.mineField = mineField;
             this.minesCounter = minesCounter;
             this.timeCounter = timeCounter;
+            timer = new DispatcherTimer();
+            timer.Tick += (sender, e) => { timeCounter.Number++; };
+            timer.Interval = new TimeSpan(0, 0, 1);
 
-            
         }
 
-        public void Start(int columns, int rows, int mines)
+        public void Create(int columns, int rows, int mines)
         {
             mineField.IsEnabled = true;
             mineField.Columns = columns;
@@ -52,6 +50,7 @@ namespace Minesweeper_WPF
             mineField.Children.Clear();
             mineField.ColumnDefinitions.Clear();
             mineField.RowDefinitions.Clear();
+            timer.Stop();
 
             //mineField.Engage();
             //minesCounter.Number = mineField.Mines;
@@ -88,10 +87,9 @@ namespace Minesweeper_WPF
             PlaceMines();
             DismantledMinesChanged?.Invoke(this, new EventArgs());
 
-            timer = new DispatcherTimer();
+            
             timeCounter.Number = 0;
-            timer.Tick += (sender, e) => { timeCounter.Number++; };
-            timer.Interval = new TimeSpan(0,0,1);
+            
             
         }
 

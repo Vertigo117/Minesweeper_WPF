@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Minesweeper_WPF
 {
@@ -28,6 +17,7 @@ namespace Minesweeper_WPF
         public MainWindow()
         {
             InitializeComponent();
+            game = new Game(mineField, minesCounter, timer);
             mines = 10;
             columns = 10;
             rows = 10;
@@ -40,13 +30,12 @@ namespace Minesweeper_WPF
         private void Engage()
         {
             emotionsBtn.EmotionTypeValue = EmotionType.Common;
-            game = new Game(mineField, minesCounter, timer);
             game.DismantledMinesChanged += (sender, e) => { minesCounter.Number = mineField.Mines - game.DismantledMines; };
             game.Defeat += (sender, e) => { emotionsBtn.EmotionTypeValue = EmotionType.Lose; Sounds.PlayOnDefeat(); };
             game.Victory += (sender, e) => { emotionsBtn.EmotionTypeValue = EmotionType.Win; Sounds.PlayOnVictory(); };
             game.ChangeEmotion += (sender, e) => { emotionsBtn.EmotionTypeValue = EmotionType.PressDown; };
             game.RestoreEmotion += (sender, e) => { emotionsBtn.EmotionTypeValue = EmotionType.Common; };
-            game.Start(columns,rows,mines);
+            game.Create(columns,rows,mines);
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
