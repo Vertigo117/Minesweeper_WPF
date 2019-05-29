@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Minesweeper_WPF"
         mc:Ignorable="d"
-        Title="MineSweeper" Height="350" Width="240" ResizeMode="CanMinimize">
+        Title="MineSweeper" Height="330" Width="220" ResizeMode="CanMinimize">
     <Window.Resources>
         
     </Window.Resources>
@@ -20,9 +20,6 @@
                 <MenuItem Header="Expert"  Click="MenuItem_Click"/>
                 <Separator />
                 <MenuItem Header="Exit" Click="MenuItem_Click" />
-            </MenuItem>
-            <MenuItem Header="Help">
-                <MenuItem Header="About" Command="{Binding AboutCommand}"/>
             </MenuItem>
         </Menu>
         <Border BorderThickness="3 3 0 0" BorderBrush="White">
