@@ -180,12 +180,12 @@ namespace Minesweeper_WPF
 
             DismantledMinesChanged?.Invoke(this, new EventArgs());
 
-            if(dismantledMines==mineField.Mines)
-            {
-                mineField.IsEnabled = false;
-                Victory?.Invoke(this, new EventArgs());
-                timer.Stop();
-            }
+            //if(dismantledMines==mineField.Mines)
+            //{
+            //    mineField.IsEnabled = false;
+            //    Victory?.Invoke(this, new EventArgs());
+            //    timer.Stop();
+            //}
 
 
         }
@@ -209,6 +209,22 @@ namespace Minesweeper_WPF
                     button.Explode?.Invoke(this, new EventArgs());
                 }
                 else Open(button);
+            }
+
+            int counter=0;
+            foreach(MineField_Button b in buttonArray)
+            {
+                if(b.Opened)
+                {
+                    counter++;
+                }
+            }
+
+            if (counter == mineField.Rows*mineField.Columns-mineField.Mines)
+            {
+                mineField.IsEnabled = false;
+                Victory?.Invoke(this, new EventArgs());
+                timer.Stop();
             }
         }
 
