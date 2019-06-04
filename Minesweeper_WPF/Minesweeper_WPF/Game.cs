@@ -225,6 +225,13 @@ namespace Minesweeper_WPF
                 mineField.IsEnabled = false;
                 Victory?.Invoke(this, new EventArgs());
                 timer.Stop();
+                foreach(MineField_Button b in buttonArray)
+                {
+                    if(!b.Dismantled && !b.Opened)
+                    {
+                        b.SetType(CellType.Flagged);
+                    }
+                }
             }
         }
 

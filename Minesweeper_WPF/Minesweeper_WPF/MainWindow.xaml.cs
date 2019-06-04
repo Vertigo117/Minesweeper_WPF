@@ -53,25 +53,25 @@ namespace Minesweeper_WPF
                     mines = 10;
                     columns = 10;
                     rows = 10;
-                    this.Width = 220;
-                    this.Height = 330;
+                    this.Width = 230;
+                    this.Height = 340;
                     Engage();
                     break;
 
                 case "Intermediate":
                     mines = 40;
-                    columns = 20;
-                    rows = 20;
+                    columns = 16;
+                    rows = 16;
                     this.Height = 480;
                     this.Width = 400;
                     Engage();
                     break;
 
                 case "Expert":
-                    mines = 500;
-                    columns = 40;
-                    rows = 40;
-                    this.Height = 780;
+                    mines = 99;
+                    columns = 30;
+                    rows = 16;
+                    this.Height = 800;
                     this.Width = 700;
                     Engage();
                     break;
