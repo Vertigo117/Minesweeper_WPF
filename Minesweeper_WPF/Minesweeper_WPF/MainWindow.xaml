@@ -38,8 +38,8 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <local:EmotionsButton EmotionTypeValue="Common" x:Name="emotionsBtn" Grid.Row="1" Grid.Column="1"/>
-                            <local:CounterControl x:Name="timer" Grid.Row="1" Grid.Column="2" Height="25" HorizontalAlignment="Center"/>
-                            <local:CounterControl x:Name="minesCounter" Grid.Row="1" Grid.Column="0" Height="25" HorizontalAlignment="Center"/>
+                            <local:CounterControl x:Name="timer" Grid.Row="1" Grid.Column="2" Height="25" HorizontalAlignment="Right"/>
+                            <local:CounterControl x:Name="minesCounter" Grid.Row="1" Grid.Column="0" Height="25" HorizontalAlignment="Left"/>
                            
                             
                                 
