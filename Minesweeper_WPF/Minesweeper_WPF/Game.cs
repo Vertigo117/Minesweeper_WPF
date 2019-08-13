@@ -230,6 +230,8 @@ namespace Minesweeper_WPF
                     if(!b.Dismantled && !b.Opened)
                     {
                         b.SetType(CellType.Flagged);
+                        dismantledMines++;
+                        DismantledMinesChanged?.Invoke(this, new EventArgs());
                     }
                 }
             }
